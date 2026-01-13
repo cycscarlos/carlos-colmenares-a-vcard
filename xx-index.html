@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <title>Carlos Colmenares A. | VCard</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
     <!-- Open Graph / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta
@@ -49,7 +43,7 @@
       body {
         background: var(--bg);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         min-height: 100vh;
         padding: 1rem;
@@ -58,17 +52,17 @@
         background: var(--card);
         border-radius: 16px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-        max-width: 380px;
-        width: 100%;
-        padding: 2rem;
+        width: 92vw;
+        max-width: 400px;
+        padding: 2rem 1rem;
         text-align: center;
+        margin-top: 2vh;
       }
       .pics {
         display: flex;
-        gap: 1rem;
         justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
+        align-items: flex-start;
+        margin-bottom: 0.8rem;
       }
       .logo {
         width: 100px;
@@ -77,8 +71,8 @@
         object-fit: cover;
       }
       .photo {
-        width: 110px;
-        height: 110px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -149,12 +143,43 @@
         transform: scaleX(1);
         transform-origin: left;
       }
+
+      /* Móvil: tarjeta GRANDE */
+      @media (max-width: 480px) {
+        .card {
+          width: 92vw;
+          max-width: none;
+          padding: 2rem 1rem;
+          font-size: 1.4rem;
+        }
+        h1 {
+          font-size: 1.9rem;
+        }
+        .btn,
+        .web-link {
+          font-size: 1.2rem;
+          padding: 0.9rem 1.8rem;
+        }
+        .logo {
+          width: 100px;
+          height: 100px;
+        }
+        .photo {
+          width: 120px;
+          height: 120px;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="card">
       <div class="pics">
+        <!-- <img
+          class="logo"         
+          src="https://i.imgur.com/N6WiHs2.png"
+          alt="Logo CYCS & Co. Ingeniería e Instalaciones"
+        /> -->
         <img
           class="logo"
           src="https://i.imgur.com/p4JX4Hy.png"
@@ -171,18 +196,16 @@
         ccolmenaresa@gmail.com
       </div>
 
-      <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf">
-        Guardar contacto
-      </a>
-
+      <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf"
+        >Guardar contacto</a
+      >
       <a
         class="web-link"
         href="https://cycs.netlify.app"
         target="_blank"
         rel="noopener"
+        >Visitar sitio web</a
       >
-        Visitar sitio web
-      </a>
     </div>
   </body>
 </html>
