@@ -62,7 +62,7 @@
       }
 
       /* Imágenes sin bordes */
-      .logo,
+      /* .logo,
       .photo {
         width: 110px;
         height: 110px;
@@ -72,6 +72,23 @@
         object-fit: cover;
         display: block;
         margin: 0 auto;
+      } */
+      .pics {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .logo,
+      .photo {
+        width: 90px;
+        height: 90px;
+        max-width: 90px;
+        max-height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
       }
       .logo {
         margin-bottom: 0.5rem;
@@ -153,12 +170,15 @@
   <body>
     <div class="card">
       <!-- Logo empresa (opcional) -->
-      <img
-        class="logo"
-        src="https://i.imgur.com/N6WiHs2.png"
-        alt="Logo CYCS & Co. Ingeniería e Instalaciones"
-      />
-      <img class="photo" src="https://i.imgur.com/7KJuzey.jpg" alt="Foto" />
+      <!-- Envolvedor -->
+      <div class="pics">
+        <img
+          class="logo"
+          src="https://i.imgur.com/N6WiHs2.png"
+          alt="Logo CYCS & Co. Ingeniería e Instalaciones"
+        />
+        <img class="photo" src="https://i.imgur.com/7KJuzey.jpg" alt="Foto" />
+      </div>
 
       <h1>Carlos Colmenares A.</h1>
       <p class="tag">CEO; Ingeniero de Software</p>
