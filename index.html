@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Carlos Colmenares A. | VCard</title>
 
-    <!-- Open Graph / WhatsApp (sin cambios) -->
+    <!-- Open Graph / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta
       property="og:site_name"
@@ -24,79 +24,43 @@
       content="https://carlos-colmenares-a-vcard.netlify.app"
     />
 
-    <!-- Redirección: esta vez NO automática, para que puedan ver la tarjeta -->
-    <!-- <meta http-equiv="refresh" content="0; url=https://cycs.netlify.app/"/> -->
-
     <!-- Estilos -->
     <style>
-                :root {
-                  --bg: #f4f6fa;
-                  --card: #fff;
-                  --btn-base: #27607c;
-                  --text: #222;
-                  --link: #9d8d6c;
-                  --link-hover: #b8a882;
-                }
-                * {
-                  box-sizing: border-box;
-                  margin: 0;
-                  padding: 0;
-                  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                }
-                body {
-                  background: var(--bg);
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  min-height: 100vh;
-                  padding: 1rem;
-                }
-                .card {
-                  background: var(--card);
-                  border-radius: 16px;
-                  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-                  max-width: 380px;
-                  width: 100%;
-                  padding: 2rem;
-                  text-align: center;
-                }
-
-                /* Imágenes */
-
-                /* Contenedor de las imágenes */
-                /* .pics {
-                  display: flex;
-                  gap: 1rem;
-                  justify-content: center;
-                  align-items: center;
-                  margin-bottom: 0.5rem;
-                } */
-
-                /* Logo: más pequeño */
-                /* .logo {
-                  width: 70px;
-                  height: 70px;
-                  max-width: 70px;
-                  max-height: 70px;
-                  object-fit: cover;
-                  border-radius: 50%;
-                } */
-
-                /* Foto: más grande (diferencia visible) */
-                /* .photo {
-                  width: 110px;
-                  height: 110px;
-                  max-width: 110px;
-                  max-height: 110px;
-                  object-fit: cover;
-                  border-radius: 50%;
-                } */
-
-                /* Logo pegado arriba-izquierda */
+      :root {
+        --bg: #f4f6fa;
+        --card: #fff;
+        --btn-base: #27607c;
+        --text: #222;
+        --link: #9d8d6c;
+        --link-hover: #b8a882;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+      body {
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 1rem;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        max-width: 380px;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+      }
       .pics {
         display: flex;
         gap: 0.75rem;
-        align-items: flex-start; /* arriba */
+        align-items: flex-start;
         margin-bottom: 0.8rem;
       }
       .logo {
@@ -115,105 +79,98 @@
         border-radius: 50%;
         object-fit: cover;
       }
-
-
-                .logo {
-                  margin-bottom: 0.5rem;
-                }
-                h1 {
-                  margin: 0.75rem 0 0.25rem;
-                  font-size: 1.5rem;
-                  color: var(--text);
-                }
-                .tag {
-                  color: var(--btn-base);
-                  font-weight: 600;
-                }
-                .contact {
-                  margin: 1.2rem 0;
-                  font-size: 0.95rem;
-                  line-height: 1.5;
-                  color: #444;
-                }
-
-                /* Botón principal (sin cambios visuales, solo sin icono) */
-                .btn {
-                  position: relative;
-                  background: var(--btn-base);
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 0.75rem 1.5rem;
-                  border-radius: 8px;
-                  display: inline-block;
-                  margin-top: 0.5rem;
-                  font-weight: 600;
-                  transform: translateY(0);
-                  box-shadow: 0 6px 0 #1d475f, 0 12px 20px rgba(0, 0, 0, 0.2);
-                  transition: transform 0.2s ease, box-shadow 0.2s ease;
-                }
-                .btn:hover {
-                  transform: translateY(-4px);
-                  box-shadow: 0 10px 0 #1d475f, 0 16px 25px rgba(0, 0, 0, 0.25);
-                }
-                .btn:active {
-                  transform: translateY(0);
-                  box-shadow: 0 4px 0 #1d475f, 0 8px 15px rgba(0, 0, 0, 0.2);
-                }
-
-                /* Link elegante + animación sutil */
-                .web-link {
-                  display: inline-block;
-                  margin-top: 1rem;
-                  font-size: 0.9rem;
-                  color: var(--link);
-                  text-decoration: none;
-                  letter-spacing: 0.5px;
-                  position: relative;
-                  padding-bottom: 2px;
-                  transition: color 0.3s ease;
-                }
-                .web-link::after {
-                  content: "";
-                  position: absolute;
-                  width: 100%;
-                  height: 1px;
-                  bottom: 0;
-                  left: 0;
-                  background: var(--link);
-                  transform: scaleX(0);
-                  transform-origin: right;
-                  transition: transform 0.4s ease;
-                }
-                .web-link:hover {
-                  color: var(--link-hover);
-                }
-                .web-link:hover::after {
-                  transform: scaleX(1);
-                  transform-origin: left;
-                }
-
-                /* Tarjeta más grande en móviles */
-          @media (max-width: 480px) {
-            body { align-items: flex-start; } /* tarjeta arriba, no centrada */
-            .card {
-              width: 92vw;           /* casi todo el ancho */
-              max-width: none;
-              padding: 1.2rem;
-              font-size: 1.3rem;     /* letra más grande */
-              margin-top: 2vh;
-            }
-            h1 { font-size: 1.8rem; }
-            .btn, .web-link {
-              font-size: 1.15rem;
-              padding: 0.9rem 1.6rem;
-            }
+      h1 {
+        margin: 0.75rem 0 0.25rem;
+        font-size: 1.5rem;
+        color: var(--text);
+      }
+      .tag {
+        color: var(--btn-base);
+        font-weight: 600;
+      }
+      .contact {
+        margin: 1.2rem 0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #444;
+      }
+      .btn {
+        position: relative;
+        background: var(--btn-base);
+        color: #fff;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        transform: translateY(0);
+        box-shadow: 0 6px 0 #1d475f, 0 12px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 0 #1d475f, 0 16px 25px rgba(0, 0, 0, 0.25);
+      }
+      .btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 0 #1d475f, 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      .web-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--link);
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding-bottom: 2px;
+        transition: color 0.3s ease;
+      }
+      .web-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background: var(--link);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
+      }
+      .web-link:hover {
+        color: var(--link-hover);
+      }
+      .web-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      @media (max-width: 480px) {
+        body {
+          align-items: flex-start;
+        }
+        .card {
+          width: 92vw;
+          max-width: none;
+          padding: 1.2rem;
+          font-size: 1.3rem;
+          margin-top: 2vh;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        .btn,
+        .web-link {
+          font-size: 1.15rem;
+          padding: 0.9rem 1.6rem;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="card">
-      <!-- Logo empresa (opcional) -->
-      <!-- Envolvedor -->
       <div class="pics">
         <img
           class="logo"
@@ -231,20 +188,16 @@
         ccolmenaresa@gmail.com
       </div>
 
-      <!-- Botón híbrido: descarga el .vcf -->
-      <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf">
-        Guardar contacto
-      </a>
-
-      <!-- Link impactante -->
+      <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf"
+        >Guardar contacto</a
+      >
       <a
         class="web-link"
         href="https://cycs.netlify.app"
         target="_blank"
         rel="noopener"
+        >Visitar sitio web</a
       >
-        Visitar sitio web
-      </a>
     </div>
   </body>
 </html>
