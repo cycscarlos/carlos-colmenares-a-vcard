@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Carlos Colmenares A. - Ingeniero de Software</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Carlos Colmenares A. | CYCS & Co.</title>
 
-    <!-- Open Graph para WhatsApp -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="carlos-colmenares-a-vcard" />
-    <meta
-      property="og:title"
-      content="Carlos Colmenares A. - CEO; Ingeniero de Software"
-    />
-    <meta
-      property="og:description"
-      content="Teléfono: +58 414 324 6396 Email: ccolmenaresa@gmail.com"
-    />
-    <meta property="og:image" content="https://i.imgur.com/7KJuzey.jpg" />
-    <meta
-      property="og:url"
-      content="https://carlos-colmenares-a-vcard.netlify.app"
-    />
+  <!-- Open Graph / WhatsApp (sin cambios) -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="CYCS & Co."/>
+  <meta property="og:title" content="Carlos Colmenares A. | CEO & Ingeniero de Software"/>
+  <meta property="og:description" content="+58 414 324 6396 | ccolmenaresa@gmail.com"/>
+  <meta property="og:image" content="https://i.imgur.com/7KJuzey.jpg"/>
+  <meta property="og:url" content="https://carlos-colmenares-a-vcard.netlify.app"/>
 
-    <!-- Redirección al hacer clic en cualquier parte -->
-    <meta http-equiv="refresh" content="0; url=https://cycs.netlify.app/" />
-  </head>
-  <body>
-    <img src="./logo.png" alt="Logo CYCS & Co. Ingeniería e Instalaciones" />
-    <!-- <h1>Carlos Colmenares A.</h1>
-    <p>CEO; Ingeniero de Software</p>
-    <p>Tel: +58 414 324 6396</p>
-    <p>Email: ccolmenaresa@gmail.com</p>
-    <p>Redirigiendo a mi sitio web...</p> -->
-  </body>
+  <!-- Redirección: esta vez NO automática, para que puedan ver la tarjeta -->
+  <!-- <meta http-equiv="refresh" content="0; url=https://cycs.netlify.app/"/> -->
+
+  <!-- Estilos -->
+  <style>
+    :root{--bg:#f4f6fa;--card:#fff;--accent:#0052d4;--text:#222}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial,Helvetica,sans-serif}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:1rem}
+    .card{background:var(--card);border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.12);max-width:380px;width:100%;padding:2rem;text-align:center}
+    .card img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--accent)}
+    .card h1{margin:.75rem 0 .25rem;font-size:1.5rem;color:var(--text)}
+    .card .tag{color:var(--accent);font-weight:600}
+    .card .contact{margin:1.2rem 0;font-size:.95rem;line-height:1.5;color:#444}
+    .card .btn{background:var(--accent);color:#fff;text-decoration:none;padding:.75rem 1.5rem;border-radius:8px;display:inline-block;margin-top:.5rem;font-weight:600}
+    .card .btn:hover{opacity:.9}
+    .card .logo{width:60px;margin-bottom:.5rem}
+    @media(max-width:400px){.card{padding:1.5rem 1rem}}
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <!-- Logo empresa (opcional) -->
+    <img class="logo" src="https://i.imgur.com/7KJuzey.jpg" alt="Logo CYCS & Co.">
+    <img src="https://i.imgur.com/7KJuzey.jpg" alt="Foto">
+    <h1>Carlos Colmenares A.</h1>
+    <p class="tag">CEO & Ingeniero de Software</p>
+
+    <div class="contact">
+      📱 +58 414 324 6396<br>
+      ✉️ ccolmenaresa@gmail.com
+    </div>
+
+    <!-- Botón híbrido: descarga el .vcf -->
+    <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf">
+      ⬇️ Guardar contacto
+    </a>
+
+    <p style="margin-top:1rem;font-size:.75rem;color:#888">
+      <a href="https://cycs.netlify.app" target="_blank" rel="noopener">Visitar sitio web</a>
+    </p>
+  </div>
+</body>
 </html>
