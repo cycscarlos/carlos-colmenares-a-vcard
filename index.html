@@ -33,14 +33,15 @@
         --bg: #f4f6fa;
         --card: #fff;
         --btn-base: #27607c;
-        --btn-hover: #9d8d6c;
         --text: #222;
+        --link: #9d8d6c;
+        --link-hover: #b8a882;
       }
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: system-ui, Arial, Helvetica, sans-serif;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       body {
         background: var(--bg);
@@ -58,32 +59,38 @@
         width: 100%;
         padding: 2rem;
         text-align: center;
-      }
-      .card img {
+      } /* Imágenes sin bordes */
+      .logo,
+      .photo {
         width: 110px;
         height: 110px;
-        border-radius: 50%;
         object-fit: cover;
-        border: 4px solid var(--btn-base);
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
       }
-      .card h1 {
+      .logo {
+        margin-bottom: 0.5rem;
+      }
+      h1 {
         margin: 0.75rem 0 0.25rem;
         font-size: 1.5rem;
         color: var(--text);
       }
-      .card .tag {
+      .tag {
         color: var(--btn-base);
         font-weight: 600;
       }
-      .card .contact {
+      .contact {
         margin: 1.2rem 0;
         font-size: 0.95rem;
         line-height: 1.5;
         color: #444;
-      } /* Botón 3D + animación */
+      } /* Botón principal (sin cambios visuales,
+    solo sin icono) */
       .btn {
         position: relative;
-        background: #27607c;
+        background: var(--btn-base);
         color: #fff;
         text-decoration: none;
         padding: 0.75rem 1.5rem;
@@ -102,31 +109,38 @@
       .btn:active {
         transform: translateY(0);
         box-shadow: 0 4px 0 #1d475f, 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
-      /* .btn {
-        position: relative;
-        background: var(--btn-base);
-        color: #fff;
-        text-decoration: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
+      } /* Link elegante + animación
+    sutil */
+      .web-link {
         display: inline-block;
-        margin-top: 0.5rem;
-        font-weight: 600;
-        transform: translateY(0);
-        box-shadow: 0 6px 0 #1d475f, 0 12px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease,
-          background 0.2s ease;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--link);
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        position: relative;
+        padding-bottom: 2px;
+        transition: color 0.3s ease;
       }
-      .btn:hover {
-        background: var(--btn-hover);
-        transform: translateY(-4px);
-        box-shadow: 0 10px 0 #7a6c50, 0 16px 25px rgba(0, 0, 0, 0.25);
+      .web-link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background: var(--link);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
       }
-      .btn:active {
-        transform: translateY(0);
-        box-shadow: 0 4px 0 #7a6c50, 0 8px 15px rgba(0, 0, 0, 0.2);
-      } */
+      .web-link:hover {
+        color: var(--link-hover);
+      }
+      .web-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     </style>
   </head>
 
@@ -144,20 +158,30 @@
       <p class="tag">CEO & Ingeniero de Software</p>
 
       <div class="contact">
-        📱 +58 414 324 6396<br />
+        +58 414 324 6396<br />
         ✉️ ccolmenaresa@gmail.com
       </div>
 
       <!-- Botón híbrido: descarga el .vcf -->
       <a class="btn" href="vcard.vcf" download="Carlos_Colmenares_A.vcf">
-        ⬇️ Guardar contacto
+        Guardar contacto
       </a>
 
-      <p style="margin-top: 1rem; font-size: 0.75rem; color: #888">
+      <!-- Link impactante -->
+      <a
+        class="web-link"
+        href="https://cycs.netlify.app"
+        target="_blank"
+        rel="noopener"
+      >
+        Visitar sitio web
+      </a>
+
+      <!-- <p style="margin-top: 1rem; font-size: 0.75rem; color: #888">
         <a href="https://cycs.netlify.app" target="_blank" rel="noopener"
           >Visitar sitio web</a
         >
-      </p>
+      </p> -->
     </div>
   </body>
 </html>
