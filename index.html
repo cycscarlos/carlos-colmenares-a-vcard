@@ -83,6 +83,28 @@
       } /* Botón 3D + animación */
       .btn {
         position: relative;
+        background: #27607c;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 0.5rem;
+        font-weight: 600;
+        transform: translateY(0);
+        box-shadow: 0 6px 0 #1d475f, 0 12px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 0 #1d475f, 0 16px 25px rgba(0, 0, 0, 0.25);
+      }
+      .btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 0 #1d475f, 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      /* .btn {
+        position: relative;
         background: var(--btn-base);
         color: #fff;
         text-decoration: none;
@@ -104,7 +126,7 @@
       .btn:active {
         transform: translateY(0);
         box-shadow: 0 4px 0 #7a6c50, 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
+      } */
     </style>
   </head>
 
@@ -113,7 +135,7 @@
       <!-- Logo empresa (opcional) -->
       <img
         class="logo"
-        src="https://i.imgur.com/aF5a1cE.png"
+        src="https://i.imgur.com/N6WiHs2.png"
         alt="Logo CYCS & Co. Ingeniería e Instalaciones"
       />
       <img src="https://i.imgur.com/7KJuzey.jpg" alt="Foto" />
